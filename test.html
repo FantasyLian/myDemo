@@ -7,6 +7,9 @@
 	.nav li:first-letter { font-size: 22px; }
 	.nav:first-line { background-color: rgba(0,0,0,.5); }
 	.nav li:first-child { color: #f60; }
+	.father p:only-child { background-color: #f90; }
+	.father p:only-of-type { background-color: #f00; }
+	.nav-2 p:first-of-type { background-color: #a20; }
 	</style>
 </head>
 <body>
@@ -21,14 +24,17 @@
 		</ul>
 	</nav>
 
-	<div class="container" style="display: none;">
-		<div class="nav">
+	<div class="container">
+		<div class="nav-2">
 			<p>公司介绍</p>
 			<p>管理团队</p>
 			<p>组织架构</p>
 			<p>资质荣誉</p>
 			<p>品牌故事</p>
+		</div>
+		<div class="father">
 			<p>品牌历程</p>
+			<span>发送到据了解</span>
 		</div>
 	</div>
 	<script>
