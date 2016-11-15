@@ -1,5 +1,20 @@
-* { box-sizing: border-box; }
-
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+body{font:12px/1.7 Tahoma,\5B8B\4F53;-webkit-text-size-adjust:none;background-color:#fff;overflow-x:hidden;}
+h1,h2,h3,h4,h5,h6{*font-size:100%;font-weight:400;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,i,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul,li{list-style:none outside;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;}
+input,textarea,select,button{font-family:inherit;font-size:inherit;*font-size:100%;font-weight:inherit;resize:none;}
+button{cursor:pointer;}
+:focus{outline:0;}
+a {text-decoration:none;}
+a:hover{text-decoration:underline;}
+.clr{*zoom:1;}
+.clr:before,.clr:after{content:"";display:table;}
+.clr:after{clear:both;}
 body {
 	padding: 0;
 	margin: 0;
@@ -9,7 +24,7 @@ body {
 	color: #606c71; }
 
 a {
-	color: #1e6bb8;
+	color: #159957;
 	text-decoration: none; 、
 }
 a:hover { text-decoration: underline; }
@@ -58,12 +73,59 @@ a:hover { text-decoration: underline; }
 	}
 }
 
+/* @Nav
+ ------------------------------------------------------ */
+.nav {
+	height: 42px;
+}
+.nav ul {
+	width: 1000px;
+	margin: 0 auto;
+}
+.nav li {
+	float: left;
+	height: 42px;
+	line-height: 42px;
+	padding: 0 22px;
+	text-align: center;
+}
+.nav li.home { padding-left: 0; }
+.nav li a {
+	display: block;
+	padding: 0 14px;
+	font-size: 16px;
+	font-family: 'Microsoft Yahei';
+}
+.nav li.on a,
+.nav li a:hover {
+	height: 38px;
+	line-height: 38px;
+	border-bottom: solid 4px #fc980f;
+	text-decoration: none;
+}
+.nav ul { position: relative; }
+#navSlider {
+	height:4px;
+	background:#fe7e1d;
+	position:absolute;
+	bottom:0;
+	left:0;
+	overflow:hidden;
+}
+.nav li.on a,
+.nav li a:hover {
+	height: 42px;
+	line-height: 42px;
+	border: none;
+}
+
 .page-header {
 	color: #fff;
 	text-align: center;
 	background-color: #159957;
 	background-image: linear-gradient(120deg, #155799, #159957);
 }
+
 
 @media screen and (min-width: 64em) {
 	.page-header { padding: 5rem 6rem; }
