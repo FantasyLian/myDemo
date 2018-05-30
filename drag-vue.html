@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>拖拽效果</title>
+	<style>
+		#app {
+			position: relative;
+			top: 10px;
+			left: 10px;
+			width: 200px;
+			height: 200px;
+			background-color: #666;
+		}
+	</style>
+</head>
+<body>
+	<div id="app" @mousedown="move">
+		{{ positionX }}
+		{{ positionY }}
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script>
+	let app = new Vue({
+		el: '#app',
+		data: {
+			positionX: 0,
+			positionY: 0
+		},
+		methods: {
+			move(e) {
+				// 获取目标元素
+				let oDiv = e.target;
+
+				// 算出鼠标相对元素的位置
+				let disX = e.clientX - oDiv.offsetLeft;
+				let disY = e.clientY - oDiv.offsetTop;
+				document.onmousemove = (e) => {
+					let left = e.clientX - disX;
+					let top = e.clientY - disY;
+
+					// 绑定元素位置到positionX和positionY上
+					this.positionX = left;
+					this.positionY = top;
+
+					// 移动当前元素
+					oDiv.style.left = left + 'px';
+					oDiv.style.top = top + 'px';
+				};
+				document.onmouseup = (e) => {
+					document.onmousemove = null;
+					document.onmouseup = null;
+				}
+			}
+		},
+		computed: {}
+	});
+	</script>
+</body>
+</html>
