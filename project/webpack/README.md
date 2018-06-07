@@ -1,5 +1,7 @@
-# 安装依赖
+# 使用说明
+---
+## Install
     `npm install`
 
-#执行打包命令
+## run
     `webpack`
