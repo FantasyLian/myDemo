@@ -1,0 +1,15 @@
+{
+	"student": "",
+	"studentInfo": [{
+		"avatar_url": "https://i.loli.net/2017/08/21/599a521472424.jpg",
+		"name": "连军Anfield",
+	},
+	{
+		"avatar_url": "https://i.loli.net/2017/08/21/599a521472424.jpg",
+		"name": "张三Zhangsan",
+	},
+	{
+		"avatar_url": "https://i.loli.net/2017/08/21/599a521472424.jpg",
+		"name": "李四LiSi",
+	}]
+}
