@@ -18,6 +18,9 @@ circle {
 	transform: translate(-50%, -50%);
 	font-size: 32px;
 }
+.bar-wrap {
+	text-align: center;
+}
 input[type="range"] {
 	width: 320px;
 }

@@ -28,8 +28,8 @@ class Circle extends Component {
 					<circle cx="220" cy="220" r="170" strokeWidth="30" stroke="#D1D3D7" fill="none"></circle>
 					<circle cx="220" cy="220" r="170" strokeWidth="50" stroke="#00A5E0" fill="none" transform="matrix(0,-1,1,0,0,440)" strokeDasharray="0 1069"></circle>
 				</svg>
-				<div className="progress">{this.state.value}%</div>
-				<p>拖我：<input id="range" type="range" min="0" max="100" value={this.state.value} onChange={this.handleRange.bind(this)}/></p>
+				<div className="progress">{ this.state.value }%</div>
+				<p className="bar-wrap"><input id="range" type="range" min="0" max="100" value={ this.state.value } onChange={ this.handleRange.bind(this) } /></p>
 			</div>
 		);
 	}
