@@ -1,0 +1,23 @@
+circle {
+	-webkit-transition: stroke-dasharray .25s;
+	transition: stroke-dasharray .25s;
+
+	transform: matrix(0, -1, -1, 0, 0, 0);
+	transform-origin: 220px 220px 0;
+}
+
+.Circle-wrap {
+	width: 440px;
+	height: 440px;
+	position: relative;
+}
+.progress {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 32px;
+}
+input[type="range"] {
+	width: 320px;
+}
