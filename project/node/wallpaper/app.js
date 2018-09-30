@@ -38,7 +38,7 @@ class Wallpaper {
 	sendRequest() {
 		request(url, (error, response, body) => {
 			if (!error && response.statusCode === 200) {
-				const $ = cheerio.load(body);
+				let $ = cheerio.load(body);
 				$('.photo-list-padding a img').each(function() {
 					let src = $(this).attr('src');
 					src = src.replace(/t_s208x130c5/, 't_s1600x900c5');
