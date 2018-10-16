@@ -8,3 +8,6 @@ let arr2 = [4, 5];
 let arr3 = arr1.concat(arr2);
 console.log(arr1);
 console.log(arr3);
+
+let arr4 = [...arr1, ...arr2]
+console.log(arr4);
