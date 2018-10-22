@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>第一个 Highcharts 图表</title>
+</head>
+<body>
+	<!-- 图表容器 -->
+	<div id="container"></div>
+	<!-- 引入 highcharts.js -->
+	<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+	<script src="http://cdn.hcharts.cn/highcharts/modules/drilldown.js"></script>
+	<script>
+		// 图表配置
+		const options = {
+			chart: {
+				type: 'bar'	//图表类型
+			},
+			title: {
+				text: '我的第一个图表'	// 吧标题
+			},
+			xAxis: {
+				categories: ['苹果', '香蕉', '橙子']	// x轴
+			},
+			yAxis: {
+				title: {
+					text: '吃水果个数'
+				}
+			},
+			series: [{
+				name: '小明',
+				data: [1, 0, 4]
+			}, {
+				name: '小红',
+				data: [5, 7, 3]
+			}]
+		};
+
+
+		const opt2 = {
+			title: {
+				text: 'Zone with dash style'
+			},
+			subtitle: {
+				text: 'Dotted line typically signifies prognosis'
+			},
+			xAxis: {
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+			},
+			series: [{
+				data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+				zoneAxis: 'x',
+				zones: [{
+					value: 8
+				}, {
+					dashStyle: 'dot'
+				}]
+			}]
+		};
+
+		// drilldown 下钻
+		const opt3 = {
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: 'Basic drilldown'
+			},
+			xAxis: {
+				type: 'category'
+			},
+			legend: {
+				enabled: false
+			},
+			plotOptions: {
+				series: {
+					borderWidth: 0,
+					dataLabels: {
+						enabled: true
+					}
+				}
+			},
+			series: [{
+				name: 'Things',
+				colorByPoint: true,
+				data: [{
+					name: 'Animals',
+					y: 5,
+					drilldown: 'animals'
+				}, {
+					name: 'Fruits',
+					y: 2,
+					drilldown: 'fruits'
+				}, {
+					name: 'Cars',
+					y: 4,
+					drilldown: 'cars'
+				}]
+			}],
+			drilldown: {
+				series: [{
+					id: 'animals',
+					data: [
+						['Cats', 4],
+						['Dogs', 2],
+						['Cows', 1],
+						['Sheep', 2],
+						['Pigs', 1]
+					]
+				}, {
+					id: 'fruits',
+					data: [{
+						name: 'Apples',
+						y: 4
+					},{
+						name: 'Oranges', 
+						y:2,
+						drilldown: 'third-leves'
+					}]
+				}, {
+					id: 'cars',
+					data: [
+						['Toyota', 4],
+						['Opel', 2],
+						['Volkswagen', 2]
+					]
+				},{
+					id: 'third-leves',
+					data: [
+						['Toyota', 4],
+						['Opel', 2],
+						['Volkswagen', 2]
+					]
+				}]
+			}
+		}
+
+		// 图表初始化函数
+		let chart = Highcharts.chart('container', opt3);
+	</script>
+</body>
+</html>
