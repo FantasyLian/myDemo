@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>line-basic</title>
+</head>
+<body>
+	<div id="container"></div>
+	<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+	<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+	<script src="http://cdn.hcharts.cn/highcharts/modules/series-label.js"></script>
+	<script>
+	let chart = Highcharts.chart('container', {
+		chart: {
+			type: 'spline'
+		},
+		title: {
+			text: '预约挂号时段统计'
+		},
+		credits: {
+			enabled: false
+		},
+		xAxis: {
+			categories: ['0点', '1点', '2点', '3点', '4点', '5点',
+				'6点', '7点', '8点', '9点', '10点', '11点','12点', '13点', '14点',
+				'15点', '16点', '17点', '18点', '19点', '20点', '21点', '22点', '23点'
+			],
+			// tickmarkPlacement: 'on'
+		},
+		yAxis: {
+			title: {
+				text: ''
+			},
+			labels: {
+				formatter: function() {
+					return this.value + '人次';
+				}
+			}
+		},
+		legend: {
+			enabled: false
+		},
+		tooltip: {
+			formatter: function() {
+				let x = parseInt(this.x);
+				let y = this.y;
+				return x + '~' + (x + 1) + '点预约人次：' + y;
+			}
+		},
+		plotOptions: {
+			spline: {
+				marker: {
+					radius: 5,
+					lineColor: '#1470b3',
+					lineWidth: 1,
+					fillColor: '#fff'
+				}
+			}
+		},
+		series: [{
+			data: [72, 81, 68, 93, 82, 157, 201, 252, 213, 125, 126, 153, 186, 165, 174, 153, 181, 150, 143, 187, 127, 116, 105, 52]
+		}]
+	});
+	</script>
+</body>
+</html>
