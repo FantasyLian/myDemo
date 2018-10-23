@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<title>column-drilldown</title>
+	<style>
+		#container {
+			min-width: 310px;
+			max-width: 800px;
+			margin: 0 auto
+		}
+	</style>
+</head>
+<body>
+	<div id="container"></div>
+	<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+	<script src="http://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+	<script>
+		let data = [{
+			name: '社区科',
+			y: 341
+		}, {
+			name: '体检科',
+			y: 300
+		}, {
+			name: '心内科',
+			y: 296
+		}, {
+			name: '肿瘤科',
+			y: 260
+		}, {
+			name: '内分泌科',
+			y: 249
+		}, {
+			name: '呼吸科',
+			y: 241
+		}, {
+			name: '骨科',
+			y: 211
+		}, {
+			name: '放疗科',
+			y: 156
+		}, {
+			name: '神内科',
+			y: 134
+		}, {
+			name: '消化科',
+			y: 103
+		}];
+		Highcharts.setOptions({
+			colors: ['#59b3e7']
+		});
+		Highcharts.chart('container', {
+			chart: {
+				type: 'column'
+			},
+			title: {
+				text: '发布信息次数统计（健康宣教）'
+			},
+			credits: {
+				enabled: false
+			},
+			xAxis: {
+				type: 'category',
+				lineColor: '#ccc'
+			},
+			yAxis: {
+				title: {
+					text: ''
+				},
+				lineColor: '#ccc',
+				lineWidth: 1
+			},
+			legend: {
+				enabled: false
+			},
+			plotOptions: {
+				series: {
+					borderWidth: 0,
+					dataLabels: {
+						enabled: true
+					}
+				}
+			},
+			tooltip: {
+				pointFormat: '{point.y}'
+			},
+			series: [{
+				name: '浏览器品牌',
+				colorByPoint: true,
+				data: data
+			}]
+		});
+	</script>
+</body>
+</html>
