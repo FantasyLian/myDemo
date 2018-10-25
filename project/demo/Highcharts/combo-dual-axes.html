@@ -13,75 +13,72 @@
 	<body>
 		<div id="container" style="min-width:400px;height:400px"></div>
 		<script>
-			let chart = Highcharts.chart('container', {
+		Highcharts.setOptions({
+			colors: ['#59b3e6', '#2dbf00']
+		});
+		Highcharts.chart('container', {
+			title: {
+				text: '危急值同比分析（预警消息）'
+			},
+			credits: {
+				enabled: false
+			},
+			xAxis: [{
+				categories: ['10月', '11月', '12月', '1月', '2月', '3月',
+					'4月', '5月', '6月', '7月', '8月', '9月'
+				],
+				crosshair: true
+			}],
+			yAxis: [{ // Primary yAxis
 				title: {
-					text: '危急值同比分析（预警消息）'
+					text: '同比增长率',
 				},
-				credits: {
-					enabled: false
-				},
-				xAxis: [{
-					categories: ['10月', '11月', '12月', '1月', '2月', '3月',
-						'4月', '5月', '6月', '7月', '8月', '9月'
-					],
-					crosshair: true
-				}],
-				yAxis: [{ // Primary yAxis
-					labels: {
-						style: {
-							color: Highcharts.getOptions().colors[1]
-						}
-					},
-					title: {
-						text: '',
-						style: {
-							color: Highcharts.getOptions().colors[1]
-						}
+				labels: {
+					style: {
+						color: '#444'
 					}
-				}, { // Secondary yAxis
-					title: {
-						text: '',
-						style: {
-							color: Highcharts.getOptions().colors[0]
-						}
-					},
-					labels: {
-						text: '',
-						style: {
-							color: Highcharts.getOptions().colors[0]
-						}
-					},
-					opposite: true
-				}],
+				}
+			}, { // Secondary yAxis
+				title: {
+					text: '条数',
+				},
+				labels: {
+					text: '',
+					style: {
+						color: '#444'
+					}
+				},
+				opposite: true
+			}],
+			tooltip: {
+				shared: true
+			},
+			legend: {
+				layout: 'horizontal',
+				align: 'center',
+				verticalAlign: 'top',
+				x: 0,
+				y: 0,
+				floating: false,
+				backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+			},
+			series: [{
+				name: '条数',
+				type: 'column',
+				yAxis: 1,
+				data: [49, 71, 106, 129, 144, 176, 135, 148, 216, 194, 95, 54],
 				tooltip: {
-					shared: true
-				},
-				legend: {
-					layout: 'horizontal',
-					align: 'center',
-					verticalAlign: 'top',
-					x: 0,
-					y: 0,
-					floating: false,
-					backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
-				},
-				series: [{
-					name: '发送预警消息条目',
-					type: 'column',
-					yAxis: 1,
-					data: [49, 71, 106, 129, 144, 176, 135, 148, 216, 194, 95, 54],
-					tooltip: {
-						valueSuffix: ' 条'
-					}
-				}, {
-					name: '同比增长率',
-					type: 'spline',
-					data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
-					tooltip: {
-						valueSuffix: '%'
-					}
-				}]
-			});
+					valueSuffix: ' 条'
+				}
+			}, {
+				name: '同比增长率',
+				type: 'spline',
+				data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
+				tooltip: {
+					valueSuffix: '%'
+				}
+			}]
+		});
 		</script>
 	</body>
 </html>
