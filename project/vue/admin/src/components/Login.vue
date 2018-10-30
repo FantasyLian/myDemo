@@ -43,10 +43,10 @@
                 },
                 rules2: {
                     account: [
-                        {validator: checkAccount, trigger: 'blur'},
+                        {validator: checkAccount, trigger: 'blur'}
                     ],
                     passwd: [
-                        {validator: checkPass, trigger: 'blur'},
+                        {validator: checkPass, trigger: 'blur'}
                     ]
                 }
             }
