@@ -1,3 +1,139 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:focus {
+    outline: 0 !important;
+}
 .container {
     text-align: left;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table td {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+}
+.inline {
+    display: inline-block !important;
+    vertical-align: top;
+}
+.text-label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.text-label .text-label-star {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    line-height: 20px;
+    color: #e74a25;
+    font-size: 18px;
+    font-weight: bold;
+}
+.el-input__inner,
+.form-control {
+    border-color: #cfdadd;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    transition: border-color ease-in-out .15s;
+}
+.el-input__inner:focus,
+.form-control:focus {
+    border-color: #23b7e5;
+}
+.el-input__icon {
+    line-height: 1;
+}
+.el-input__inner,
+.input-sm {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.select-sm .form-control {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+.text-color2, 
+.text-color2:hover, 
+.text-color2:focus {
+    color: #00bbd9;
+}
+.el-radio,
+.el-checkbox {
+    line-height: 30px;
+    margin-left: 10px;
+}
+.w-sm {width: 150px!important;}
+.w-ss {width: 120px;}
+.m-t-xs {margin-top: 5px;}
+.m-r-xs {margin-right: 5px;}
+.m-t-sm {margin-top: 10px;}
+.text-center {text-align: center;}
+
+/* upload avatar */
+.ui-upload-box {
+    box-sizing: content-box;
+    position: relative;
+    margin: 0 auto;
+}
+.ui-upload-view {
+    margin: 10px auto;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    z-index: 5;
+}
+.ui-upload-view > img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+.ui-upload-btn {
+    position: relative;
+    overflow: hidden;
+}
+.btn-sm {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.btn-info {
+    color: #fff;
+    background-color: #0283cc;
+    border-color: #0283cc;
+}
+.ui-upload-file {
+    width: 70px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.ui-upload-file input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    cursor: pointer;
+    opacity: .01;
+    filter: alpha(opacity=1);
 }
