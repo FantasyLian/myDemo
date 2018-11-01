@@ -257,8 +257,8 @@
 										<span class="text-label-word">常住类型：</span>
 									</div>
 									<div class="inline">
-										<el-radio v-model="householdRegister" label="1">户籍</el-radio>
-  										<el-radio v-model="householdRegister" label="2">非户籍</el-radio>
+										<el-radio v-model="householdRegister" label="户籍"></el-radio>
+  										<el-radio v-model="householdRegister" label="非户籍"></el-radio>
 									</div>
 								</div>
 								<div class="inline">
@@ -280,18 +280,18 @@
 								</div>
 								<div class="inline">
 									<div>
-										<el-radio v-model="bloodType.type" label="A">A型</el-radio>
-  										<el-radio v-model="bloodType.type" label="B">B型</el-radio>
-										<el-radio v-model="bloodType.type" label="O">O型</el-radio>
-  										<el-radio v-model="bloodType.type" label="AB">AB型</el-radio>
-										<el-radio v-model="bloodType.type" label="不详">不详</el-radio>
+										<el-radio v-model="bloodType.type" label="A"></el-radio>
+  										<el-radio v-model="bloodType.type" label="B"></el-radio>
+										<el-radio v-model="bloodType.type" label="O"></el-radio>
+  										<el-radio v-model="bloodType.type" label="AB"></el-radio>
+										<el-radio v-model="bloodType.type" label="不详"></el-radio>
 									</div>
 									<div class="m-t-xs">
 										<span class="inline text-label">RH：</span>
 										<div class="inline">
-											<el-radio v-model="bloodType.rh" label="阴性">阴性</el-radio>
-											<el-radio v-model="bloodType.rh" label="阳性">阳性</el-radio>
-											<el-radio v-model="bloodType.rh" label="不详">不详</el-radio>
+											<el-radio v-model="bloodType.rh" label="阴性"></el-radio>
+											<el-radio v-model="bloodType.rh" label="阳性"></el-radio>
+											<el-radio v-model="bloodType.rh" label="不详"></el-radio>
 										</div>
 									</div>
 								</div>
@@ -306,16 +306,16 @@
 									<div class="inline">
 										<select class="form-control input-sm">
 											<option value="" class="">请选择</option>
-											<option value="0" label="研究生">研究生</option>
-											<option value="1" label="大学本科">大学本科</option>
-											<option value="2" label="大学专科和专科学校">大学专科和专科学校</option>
-											<option value="3" label="中等专业学校">中等专业学校</option>
-											<option value="4" label="技工学校">技工学校</option>
-											<option value="5" label="高中">高中</option>
-											<option value="6" label="初中">初中</option>
-											<option value="7" label="小学">小学</option>
-											<option value="8" label="文盲或半文盲">文盲或半文盲</option>
-											<option value="9" label="不详">不详</option>
+											<option value="0" label="研究生"></option>
+											<option value="1" label="大学本科"></option>
+											<option value="2" label="大学专科和专科学校"></option>
+											<option value="3" label="中等专业学校"></option>
+											<option value="4" label="技工学校"></option>
+											<option value="5" label="高中"></option>
+											<option value="6" label="初中"></option>
+											<option value="7" label="小学"></option>
+											<option value="8" label="文盲或半文盲"></option>
+											<option value="9" label="不详"></option>
 										</select>
 									</div>
 								</div>
@@ -327,15 +327,15 @@
 								<div class="inline">
 									<select class="form-control input-sm">
 										<option value="" class="">请选择</option>
-										<option value="0" label="国家机关、党群组织、企业、事业单位负责人">国家机关、党群组织、企业、事业单位负责人</option>
-										<option value="1" label="专业技术人员">专业技术人员</option>
-										<option value="2" label="办事人员和有关人员">办事人员和有关人员</option>
-										<option value="3" label="商业、服务业人员">商业、服务业人员</option>
-										<option value="4" label="农、林、牧、渔、水利业生产人员">农、林、牧、渔、水利业生产人员</option>
-										<option value="5" label="生产、运输设备操作人员及有关人员">生产、运输设备操作人员及有关人员</option>
-										<option value="6" label="军人">军人</option>
-										<option value="7" label="不便分类的其他从业人员">不便分类的其他从业人员</option>
-										<option value="8" label="无职业">无职业</option>
+										<option value="0" label="国家机关、党群组织、企业、事业单位负责人"></option>
+										<option value="1" label="专业技术人员"></option>
+										<option value="2" label="办事人员和有关人员"></option>
+										<option value="3" label="商业、服务业人员"></option>
+										<option value="4" label="农、林、牧、渔、水利业生产人员"></option>
+										<option value="5" label="生产、运输设备操作人员及有关人员"></option>
+										<option value="6" label="军人"></option>
+										<option value="7" label="不便分类的其他从业人员"></option>
+										<option value="8" label="无职业"></option>
 									</select>
 								</div>
 							</td>
@@ -347,11 +347,11 @@
 										<span class="text-label-word">婚姻状况：</span>
 									</div>
 									<div class="inline">
-										<el-radio v-model="marriage" label="未婚">未婚</el-radio>
-										<el-radio v-model="marriage" label="已婚">已婚</el-radio>
-										<el-radio v-model="marriage" label="丧偶">丧偶</el-radio>
-										<el-radio v-model="marriage" label="离婚">离婚</el-radio>
-										<el-radio v-model="marriage" label="未说明的婚姻状况">未说明的婚姻状况</el-radio>
+										<el-radio v-model="marriage" label="未婚"></el-radio>
+										<el-radio v-model="marriage" label="已婚"></el-radio>
+										<el-radio v-model="marriage" label="丧偶"></el-radio>
+										<el-radio v-model="marriage" label="离婚"></el-radio>
+										<el-radio v-model="marriage" label="未说明的婚姻状况"></el-radio>
 									</div>
 								</div>
 							</td>
@@ -365,16 +365,16 @@
 									</div>
 									<div class="inline">
 										<div>
-											<el-checkbox >城镇职工基本医疗保险</el-checkbox>
-											<el-checkbox >城镇居民基本医疗保险</el-checkbox>
-											<el-checkbox >新型农村合作医疗</el-checkbox>
+											<el-checkbox label="城镇职工基本医疗保险"></el-checkbox>
+											<el-checkbox label="城镇居民基本医疗保险"></el-checkbox>
+											<el-checkbox label="新型农村合作医疗"></el-checkbox>
 										</div>
 										<div class="m-t-xs">
-											<el-checkbox >贫困救助</el-checkbox>
-											<el-checkbox >商业医疗保险</el-checkbox>
-											<el-checkbox >全公费</el-checkbox>
-											<el-checkbox >全自费</el-checkbox>
-											<el-checkbox >其他</el-checkbox>
+											<el-checkbox label="贫困救助"></el-checkbox>
+											<el-checkbox label="商业医疗保险"></el-checkbox>
+											<el-checkbox label="全公费"></el-checkbox>
+											<el-checkbox label="全自费"></el-checkbox>
+											<el-checkbox label="其他"></el-checkbox>
 										</div>
 									</div>
 								</div>
@@ -399,11 +399,11 @@
 										<span class="text-label-word">药物过敏史：</span>
 									</div>
 									<div class="inline m-r-xs">
-										<el-checkbox>无</el-checkbox>
-										<el-checkbox>青霉素</el-checkbox>
-										<el-checkbox>磺胺</el-checkbox>
-										<el-checkbox>链霉素</el-checkbox>
-										<el-checkbox>其他</el-checkbox>
+										<el-checkbox label="无"></el-checkbox>
+										<el-checkbox label="青霉素"></el-checkbox>
+										<el-checkbox label="磺胺"></el-checkbox>
+										<el-checkbox label="链霉素"></el-checkbox>
+										<el-checkbox label="其他"></el-checkbox>
 									</div>
 									<div class="inline">
 										<input type="text" class="form-control input-sm" style="width: 350px;" name="allergyOther" maxlength="32" disabled>
@@ -418,98 +418,342 @@
 										<span class="text-label-word">暴露史：</span>
 									</div>
 									<div class="inline">
-										<el-checkbox>无</el-checkbox>
-										<el-checkbox>化学品</el-checkbox>
-										<el-checkbox>毒物</el-checkbox>
-										<el-checkbox>射线</el-checkbox>
+										<el-checkbox label="无"></el-checkbox>
+										<el-checkbox label="化学品"></el-checkbox>
+										<el-checkbox label="毒物"></el-checkbox>
+										<el-checkbox label="射线"></el-checkbox>
 									</div>
 								</div>
 							</td>
                         </tr>
-                        <tr id="disease">
-                            <td rowspan="4" style="width: 100px;">既往史</td>
-                            <td style="width: 100px;">
-								<div class="text-center">疾病</div>
-								<div class="text-center">
-									<a class="text-color2">添加</a>
+						<tr>
+							<td colspan="3" style="padding: 0;">
+								<table class="table sub-table" style="border: none;">
+									<tr id="disease">
+										<td style="width: 100px;" rowspan="4">
+											<div class="text-center">既往史</div>
+										</td>
+										<td style="width: 100px;">
+											<div class="text-center">疾病</div>
+											<div class="text-center">
+												<a class="text-color2">添加</a>
+											</div>
+										</td>
+										<td>
+											<div v-if="!disease.length">无</div>
+										</td>
+									</tr>
+									<tr id="operation">
+										<td>
+											<div class="text-center">手术</div>
+											<div class="text-center">
+												<a class="text-color2">添加</a>
+											</div>
+										</td>
+										<td><div v-if="!operation.length">无</div></td>
+									</tr>
+									<tr id="trauma">
+										<td>
+											<div class="text-center">外伤</div>
+											<div class="text-center">
+												<a class="text-color2">添加</a>
+											</div>
+										</td>
+										<td><div v-if="!trauma.length">无</div></td>
+									</tr>
+									<tr id="infusion">
+										<td>
+											<div class="text-center">输血</div>
+											<div class="text-center">
+												<a class="text-color2">添加</a>
+											</div>
+										</td>
+										<td><div v-if="!infusion.length">无</div></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" style="padding: 0;">
+								<table class="table sub-table">
+									<tr>
+										<td rowspan="4">
+											<div class="text-center">家族史</div>
+										</td>
+										<td style="width: 100px;">
+											<div class="text-center">父亲</div>
+										</td>
+										<td>
+											<div>
+												<el-checkbox label="高血压"></el-checkbox>
+												<el-checkbox label="糖尿病"></el-checkbox>
+												<el-checkbox label="冠心病"></el-checkbox>
+												<el-checkbox label="慢性阻塞性肺疾病"></el-checkbox>
+												<el-checkbox label="恶性肿瘤"></el-checkbox>
+												<el-checkbox label="脑卒中"></el-checkbox>
+											</div>
+											<div class="m-t-xs">
+												<el-checkbox label="严重精神障碍"></el-checkbox>
+												<el-checkbox label="结核病"></el-checkbox>
+												<el-checkbox label="肝炎"></el-checkbox>
+												<el-checkbox label="先天畸形"></el-checkbox>
+												<el-checkbox label="其他"></el-checkbox>
+												<div class="inline">
+													<input type="text" class="form-control input-sm w-sm" style="width:200px;" name="familyFatherOther" maxlength="32" disabled>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-center">母亲</div>
+										</td>
+										<td>
+											<div>
+												<el-checkbox label="高血压"></el-checkbox>
+												<el-checkbox label="糖尿病"></el-checkbox>
+												<el-checkbox label="冠心病"></el-checkbox>
+												<el-checkbox label="慢性阻塞性肺疾病"></el-checkbox>
+												<el-checkbox label="恶性肿瘤"></el-checkbox>
+												<el-checkbox label="脑卒中"></el-checkbox>
+											</div>
+											<div class="m-t-xs">
+												<el-checkbox label="严重精神障碍"></el-checkbox>
+												<el-checkbox label="结核病"></el-checkbox>
+												<el-checkbox label="肝炎"></el-checkbox>
+												<el-checkbox label="先天畸形"></el-checkbox>
+												<el-checkbox label="其他"></el-checkbox>
+												<div class="inline">
+													<input type="text" class="form-control input-sm w-sm" style="width:200px;" name="familyFatherOther" maxlength="32" disabled>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-center">兄弟姐妹</div>
+										</td>
+										<td>
+											<div>
+												<el-checkbox label="高血压"></el-checkbox>
+												<el-checkbox label="糖尿病"></el-checkbox>
+												<el-checkbox label="冠心病"></el-checkbox>
+												<el-checkbox label="慢性阻塞性肺疾病"></el-checkbox>
+												<el-checkbox label="恶性肿瘤"></el-checkbox>
+												<el-checkbox label="脑卒中"></el-checkbox>
+											</div>
+											<div class="m-t-xs">
+												<el-checkbox label="严重精神障碍"></el-checkbox>
+												<el-checkbox label="结核病"></el-checkbox>
+												<el-checkbox label="肝炎"></el-checkbox>
+												<el-checkbox label="先天畸形"></el-checkbox>
+												<el-checkbox label="其他"></el-checkbox>
+												<div class="inline">
+													<input type="text" class="form-control input-sm w-sm" style="width:200px;" name="familyFatherOther" maxlength="32" disabled>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="text-center">子女</div>
+										</td>
+										<td>
+											<div>
+												<el-checkbox label="高血压"></el-checkbox>
+												<el-checkbox label="糖尿病"></el-checkbox>
+												<el-checkbox label="冠心病"></el-checkbox>
+												<el-checkbox label="慢性阻塞性肺疾病"></el-checkbox>
+												<el-checkbox label="恶性肿瘤"></el-checkbox>
+												<el-checkbox label="脑卒中"></el-checkbox>
+											</div>
+											<div class="m-t-xs">
+												<el-checkbox label="严重精神障碍"></el-checkbox>
+												<el-checkbox label="结核病"></el-checkbox>
+												<el-checkbox label="肝炎"></el-checkbox>
+												<el-checkbox label="先天畸形"></el-checkbox>
+												<el-checkbox label="其他"></el-checkbox>
+												<div class="inline">
+													<input type="text" class="form-control input-sm w-sm" style="width:200px;" name="familyFatherOther" maxlength="32" disabled>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+                        <tr>
+                            <td colspan="3">
+								<div class="inline">
+									<div class="inline text-label">
+										<span class="text-label-word">遗传病史：</span>
+									</div>
+									<div class="inline m-r-sm">
+										<el-radio v-model="heredopathia" label="1">无</el-radio>
+  										<el-radio v-model="heredopathia" label="2">有</el-radio>
+									</div>
+									<div class="inline">
+										<input type="text" class="form-control input-sm" style="width:500px;" name="hereditaryOther" maxlength="32" disabled>
+									</div>
 								</div>
 							</td>
-                            <td>
-								<div v-if="!disease.length">无</div>
-							</td>
                         </tr>
-                        <tr id="operation">
-                            <td>
-								<div class="text-center">手术</div>
-								<div class="text-center">
-									<a class="text-color2">添加</a>
+                        <tr>
+                            <td colspan="3">
+								<div class="inline">
+									<div class="inline text-label">
+										<span class="text-label-word">残疾情况：</span>
+									</div>
+									<div class="inline">
+										<div>
+											<el-checkbox label="无残疾"></el-checkbox>
+											<el-checkbox label="视力残疾"></el-checkbox>
+											<el-checkbox label="听力残疾"></el-checkbox>
+											<el-checkbox label="言语残疾"></el-checkbox>
+											<el-checkbox label="肢体残疾"></el-checkbox>
+										</div>
+										<div class="m-t-sm">
+											<div class="inline m-r-sm">
+												<el-checkbox label="智力残疾"></el-checkbox>
+												<el-checkbox label="精神残疾"></el-checkbox>
+												<el-checkbox label="其他残疾"></el-checkbox>
+											</div>
+											<div class="inline">
+												<input type="text" class="form-control input-sm" style="width:440px;" name="deformityOther" maxlength="32" disabled>
+											</div>
+										</div>
+									</div>
 								</div>
 							</td>
-                            <td>&nbsp;</td>
                         </tr>
-                        <tr id="trauma">
-                            <td>
-								<div class="text-center">外伤</div>
-								<div class="text-center">
-									<a class="text-color2">添加</a>
-								</div>
+                        <tr>
+                            <td colspan="3" style="padding: 0;">
+								<table class="table sub-table">
+									<tr>
+										<td rowspan="5"><div class="text-center">生活环境</div></td>
+										<td>
+											<div>
+												<div class="inline text-label">
+													<span class="text-label-word">厨房排风设施：</span>
+												</div>
+												<div class="inline">
+													<el-radio v-model="environment.kitchen" label="1">无</el-radio>
+													<el-radio v-model="environment.kitchen" label="2">油烟机</el-radio>
+													<el-radio v-model="environment.kitchen" label="3">换气扇</el-radio>
+													<el-radio v-model="environment.kitchen" label="4">烟囱</el-radio>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<div class="inline text-label">
+													<span class="text-label-word">燃料类型：</span>
+												</div>
+												<div class="inline">
+													<el-radio v-model="environment.fuel" label="1">液化气</el-radio>
+													<el-radio v-model="environment.fuel" label="2">煤</el-radio>
+													<el-radio v-model="environment.fuel" label="3">天然气</el-radio>
+													<el-radio v-model="environment.fuel" label="4">沼气</el-radio>
+													<el-radio v-model="environment.fuel" label="5">柴火</el-radio>
+													<el-radio v-model="environment.fuel" label="6">其他</el-radio>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<div class="inline text-label">
+													<span class="text-label-word">饮水：</span>
+												</div>
+												<div class="inline">
+													<el-radio v-model="environment.water" label="1">自来水</el-radio>
+													<el-radio v-model="environment.water" label="2">经净化过滤的水</el-radio>
+													<el-radio v-model="environment.water" label="3">井水</el-radio>
+													<el-radio v-model="environment.water" label="4">河湖水</el-radio>
+													<el-radio v-model="environment.water" label="5">塘水</el-radio>
+													<el-radio v-model="environment.water" label="6">其他</el-radio>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<div class="inline text-label">
+													<span class="text-label-word">厕所：</span>
+												</div>
+												<div class="inline">
+													<el-radio v-model="environment.toilet" label="1">厕所</el-radio>
+													<el-radio v-model="environment.toilet" label="2">一格或二格粪池式</el-radio>
+													<el-radio v-model="environment.toilet" label="3">马桶</el-radio>
+													<el-radio v-model="environment.toilet" label="4">露天粪坑</el-radio>
+													<el-radio v-model="environment.toilet" label="5">简易棚厕</el-radio>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<div class="inline text-label">
+													<span class="text-label-word">禽畜栏：</span>
+												</div>
+												<div class="inline">
+													<el-radio v-model="environment.corral" label="1">无</el-radio>
+													<el-radio v-model="environment.corral" label="2">单设</el-radio>
+													<el-radio v-model="environment.corral" label="3">室内</el-radio>
+													<el-radio v-model="environment.corral" label="4">室外</el-radio>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
 							</td>
-                            <td>&nbsp;</td>
                         </tr>
-                        <tr id="infusion">
-                            <td>
-								<div class="text-center">输血</div>
-								<div class="text-center">
-									<a class="text-color2">添加</a>
-								</div>
+                        <tr>
+                            <td colspan="3" style="padding: 0;">
+								<table class="table sub-table">
+									<tr>
+										<td rowspan="2"><div class="text-center">居民标签</div></td>
+										<td>
+											<div>
+												<div class="inline text-label">
+													<span class="text-label-word">人群分类：</span>
+												</div>
+												<div class="inline">
+													<div>
+														<el-checkbox label="1">0-6岁儿童</el-checkbox>
+														<el-checkbox label="2">孕产妇</el-checkbox>
+														<el-checkbox label="3">老年人</el-checkbox>
+													</div>
+													<div class="m-t-xs">
+														<el-checkbox label="4">高血压</el-checkbox>
+														<el-checkbox label="5">糖尿病</el-checkbox>
+														<el-checkbox label="6">精神疾病</el-checkbox>
+														<el-checkbox label="7">结核病</el-checkbox>
+													</div>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<div class="inline text-label">
+													<span class="text-label-word">特殊人群：</span>
+												</div>
+												<div class="inline">
+													<el-checkbox label="1">残疾人士</el-checkbox>
+													<el-checkbox label="2">贫困人口</el-checkbox>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
 							</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="4" style="width: 100px;">家族史</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">传染病史</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">残疾情况</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="5">生活环境</td>
-                            <td colspan="2">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">居民标签</td>
-                            <td colspan="2">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -552,6 +796,19 @@ export default {
 		marriage: '1',
 		// 既往史
 		disease: [],
+		operation: [],
+		trauma: [],
+		infusion: [],
+		// 遗传病
+		heredopathia: '1',
+		// 生活环境
+		environment: {
+			kitchen: '1',
+			fuel: '1',
+			water: '1',
+			toilet: '1',
+			corral: '1'
+		},
         model:{
             rules: {
                 name:{ type:"string",required:true,message:"必填字段",trigger:"change"},

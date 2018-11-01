@@ -17,6 +17,15 @@
     border: 1px solid #ccc;
     padding: 8px 10px;
 }
+.sub-table td {
+    border-top: none;
+}
+.sub-table tr:first-child td:first-child {
+    width: 100px;
+    vertical-align: middle;
+    border-left: none;
+}
+.sub-table td:last-child {border-right: none;}
 .inline {
     display: inline-block !important;
     vertical-align: top;
@@ -78,6 +87,7 @@
 .m-t-xs {margin-top: 5px;}
 .m-r-xs {margin-right: 5px;}
 .m-t-sm {margin-top: 10px;}
+.m-r-sm {margin-right: 10px;}
 .text-center {text-align: center;}
 
 /* upload avatar */
