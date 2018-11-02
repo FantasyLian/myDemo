@@ -24,7 +24,9 @@
     width: 100px;
     vertical-align: middle;
     border-left: none;
+    border-bottom: none;
 }
+.sub-table tr:last-child td:last-child {border-bottom: none;}
 .sub-table td:last-child {border-right: none;}
 .inline {
     display: inline-block !important;
@@ -76,6 +78,11 @@
 .text-color2:hover, 
 .text-color2:focus {
     color: #00bbd9;
+}
+.text-color4, 
+.text-color4:hover, 
+.text-color4:focus {
+    color: #e74a25;
 }
 .el-radio,
 .el-checkbox {

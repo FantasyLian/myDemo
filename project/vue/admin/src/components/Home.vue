@@ -35,7 +35,7 @@
                     </el-col>
                     <el-col :span="12">
                         <div class="grid-content">
-                            建档人：{{ form.resource }}
+                            建档人：{{ form.creator }}
                         </div>
                     </el-col>
                 </el-row>
@@ -44,12 +44,12 @@
                         <tr>
                             <td colspan="2">
                                <div class="inline" style="width:50%;">
-                                   <div class="inline text-label">
+                                   	<div class="inline text-label">
                                         <span class="text-label-star">*</span>
                                         <span class="text-label-word">姓　　名：</span>
                                     </div>
                                     <div class="inline">
-                                        <input type="text" class="form-control input-sm w-sm" name="username" id="" maxlength="">
+                                        <input type="text" class="form-control input-sm w-sm" name="username" v-model="form.username" id="" maxlength="20">
                                     </div>
                                </div>
                                <div class="inline">
@@ -57,7 +57,7 @@
                                         <span class="text-label-word">健康卡号：</span>
                                     </div>
                                     <div class="inline">
-                                        <input type="text" class="form-control input-sm w-sm" name="healthyCard" maxlength="">
+                                        <input type="text" class="form-control input-sm w-sm" v-model="form.healtyCardNo" name="healthyCard" maxlength="12">
                                     </div>
                                 </div>
                             </td>
@@ -88,8 +88,9 @@
                                         <div>
                                             <input type="text" class="form-control input-sm w-sm" name="" id="" maxlength="18">
                                         </div>
-                                        <div class="m-t-xs">
-                                            <span class="text-color2" style="cursor: pointer;">监护人信息补充</span>
+                                        <div class="m-t-xs" @click="handleSupplementGuardianInfo">
+                                            <span v-if="!form.hasGuardianInfo" class="text-color2" style="cursor: pointer;">监护人信息补充</span>
+                                            <span v-else class="text-color4" style="cursor: pointer;">取消监护人信息</span>
                                         </div>
                                     </div>
                                 </div>
@@ -99,7 +100,7 @@
                                         <span class="text-label-word">出生日期：</span>
                                     </div>
                                     <div class="inline">
-                                        <el-date-picker type="date" class="w-sm" placeholder="选择日期"></el-date-picker>
+                                        <el-date-picker v-model="form.birthday" type="date" class="w-sm" placeholder="选择日期"></el-date-picker>
                                     </div>
                                 </div>
                             </td>
@@ -125,12 +126,10 @@
                                         <span class="text-label-word">民　　族：</span>
                                     </div>
                                     <div class="inline select-sm">
-                                        <select class="form-control w-sm" id="nation">
-                                            <option value="">请选择</option>
-                                            <option value="1">汉族</option>
-                                            <option value="2">壮族</option>
-                                            <option value="0">蒙古族</option>
-                                        </select>
+										<select v-model="form.selectNation" class="form-control w-sm" id="nation">
+											<option value="">请选择</option>
+											<option :value="item.id" :key="item.key" v-for="item in preinstall.data">{{item.name}}</option>
+										</select>
                                     </div>
                                 </div>
                             </td>
@@ -222,6 +221,66 @@
 								</div>
 							</td>
                         </tr>
+						<!-- 监护人信息 -->
+						<tr v-if="form.hasGuardianInfo">
+							<td colspan="3">
+								<div>
+									<div class="inline text-label">
+										<span class="text-label-star">*</span>
+										<span class="text-label-word">监护人信息</span>
+									</div>
+								</div>
+								<div>
+									<div class="inline" style="width:50%;">
+										<div class="inline text-label">
+											<span class="text-label-word">姓　　名：</span>
+										</div>
+										<div class="inline">
+											<input type="text" class="form-control input-sm w-sm" id="parentName" name="parentName" maxlength="20">
+										</div>
+									</div>
+									<div class="inline">
+										<div class="inline text-label">
+											<span class="text-label-word">身份证号：</span>
+										</div>
+										<div class="inline">
+											<input type="text" class="form-control input-sm w-sm" id="parentIdCard" name="parentIdCard" maxlength="18">
+										</div>
+									</div>
+								</div>
+								<div class="m-t-sm">
+									<div class="inline" style="width:50%;">
+										<div class="inline text-label">
+											<span class="text-label-word">监护关系：</span>
+										</div>
+										<div class="inline">
+											<select class="form-control input-sm w-sm" id="parentRole" name="parentRole">
+												<option value="" class="">请选择</option>
+												<option value="0" label="父亲">父亲</option>
+												<option value="1" label="母亲">母亲</option>
+												<option value="2" label="配偶">配偶</option>
+												<option value="3" label="子">子</option>
+												<option value="4" label="女">女</option>
+												<option value="5" label="兄">兄</option>
+												<option value="6" label="姐">姐</option>
+												<option value="7" label="弟">弟</option>
+												<option value="8" label="妹">妹</option>
+												<option value="9" label="(外)祖父母">(外)祖父母</option>
+												<option value="10" label="其他">其他</option>
+											</select>
+										</div>
+									</div>
+									<div class="inline">
+										<div class="inline text-label">
+											<span class="text-label-word">手机号码：</span>
+										</div>
+										<div class="inline">
+											<input filter-input="N" ng-trim="false" type="text" class="form-control input-sm w-sm ng-pristine ng-untouched ng-valid ng-isolate-scope ng-valid-maxlength" id="parentPhone" name="parentPhone" ng-model="pdata.parentPhone" maxlength="11" ng-disabled="pdata.disabled">
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
                         <tr>
                             <td colspan="3">
 								<div class="inline" style="width: 33%;">
@@ -279,20 +338,20 @@
 									</div>
 								</div>
 								<div class="inline">
-									<div>
-										<el-radio v-model="bloodType.type" label="A"></el-radio>
-  										<el-radio v-model="bloodType.type" label="B"></el-radio>
-										<el-radio v-model="bloodType.type" label="O"></el-radio>
-  										<el-radio v-model="bloodType.type" label="AB"></el-radio>
-										<el-radio v-model="bloodType.type" label="不详"></el-radio>
-									</div>
+									<el-radio-group v-model="form.bloodType.type">
+										<el-radio label="A型"></el-radio>
+										<el-radio label="B型"></el-radio>
+										<el-radio label="O型"></el-radio>
+										<el-radio label="AB型"></el-radio>
+										<el-radio label="不详"></el-radio>
+									</el-radio-group>
 									<div class="m-t-xs">
 										<span class="inline text-label">RH：</span>
-										<div class="inline">
-											<el-radio v-model="bloodType.rh" label="阴性"></el-radio>
-											<el-radio v-model="bloodType.rh" label="阳性"></el-radio>
-											<el-radio v-model="bloodType.rh" label="不详"></el-radio>
-										</div>
+										<el-radio-group class="inline" v-model="form.bloodType.rh"> 
+											<el-radio label="阴性"></el-radio>
+											<el-radio label="阳性"></el-radio>
+											<el-radio label="不详"></el-radio>
+										</el-radio-group>
 									</div>
 								</div>
 							</td>
@@ -462,7 +521,7 @@
 										<td><div v-if="!trauma.length">无</div></td>
 									</tr>
 									<tr id="infusion">
-										<td>
+										<td style="border-bottom: none;">
 											<div class="text-center">输血</div>
 											<div class="text-center">
 												<a class="text-color2">添加</a>
@@ -555,7 +614,7 @@
 										</td>
 									</tr>
 									<tr>
-										<td>
+										<td style="border-bottom: none;">
 											<div class="text-center">子女</div>
 										</td>
 										<td>
@@ -766,68 +825,49 @@
     </div>
 </template>
 <script>
+import { homeForm as forms } from '../assets/data/form.data';
+import { nations as preinstall } from '../assets/data/from.preinstall';
 export default {
     name: "Home",
     data() {
-    return {
-        tableData: [],
-            dialogFormVisible: false,
-            form: {
-            name: "",
-            region: "",
-            date1: "",
-            date2: "",
-            delivery: false,
-            type: [],
-            resource: "哈利路亚",
-            desc: ""
-        },
-		formLabelWidth: "120px",
-		// 户籍
-		householdRegister: '1',
-		// 血型
-		bloodType: {
-			type: '1',
-			rh: '2'
-		},
-		// 复选框
-		checked: true,
-		// 婚姻
-		marriage: '1',
-		// 既往史
-		disease: [],
-		operation: [],
-		trauma: [],
-		infusion: [],
-		// 遗传病
-		heredopathia: '1',
-		// 生活环境
-		environment: {
-			kitchen: '1',
-			fuel: '1',
-			water: '1',
-			toilet: '1',
-			corral: '1'
-		},
-        model:{
-            rules: {
-                name:{ type:"string",required:true,message:"必填字段",trigger:"change"},
-                input:{ type:"string",required:true,message:"必填字段",trigger:"change"},
-                supplier:{ type:"string",required:true,message:"必填字段",trigger:"change"},
-            },
-            tableData2: [{
-                input: "",
-                name: "",
-                supplier: ""
-            }, {
-                input:"",
-                name:"",
-                supplier:""
-            }]
-        }
-    };
-  },
-  methods: {}
+		return {
+			tableData: [],
+			dialogFormVisible: false,
+			form: forms,	// 表单对象
+			preinstall: preinstall,		// 表单数据
+			// 户籍
+			householdRegister: '1',
+			
+			// 复选框
+			checked: true,
+			// 婚姻
+			marriage: '1',
+			// 既往史
+			disease: [],
+			operation: [],
+			trauma: [],
+			infusion: [],
+			// 遗传病
+			heredopathia: '1',
+			// 生活环境
+			environment: {
+				kitchen: '1',
+				fuel: '1',
+				water: '1',
+				toilet: '1',
+				corral: '1'
+			}
+		};
+	},
+	created() {
+		
+	},
+	methods: {
+		// 监护人信息补充
+		handleSupplementGuardianInfo() {
+			this.form.hasGuardianInfo = !this.form.hasGuardianInfo
+		}
+	}
 };
 </script>
 
