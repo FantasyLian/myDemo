@@ -1,16 +1,18 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <area-linkage></area-linkage>
   </div>
 </template>
 
 <script>
+import Linkage from './Linkage';
 export default {
   name: 'HelloWorld',
+  components: { 'area-linkage': Linkage },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '省、市、区县、街道四级联动'
     }
   }
 }
