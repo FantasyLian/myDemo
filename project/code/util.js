@@ -43,8 +43,24 @@ const parseQueryUrl = url => {
 	return json;
 }
 
+/**
+ * [description]
+ * @param  {[type]} str [description]
+ * @return {[type]}     [description]
+ */
+const string2Array = str => {
+	let arr = str.split(',');
+	let newArr = [];
+	for (let i = 0; i < arr.length; i++) {
+		let arrOne = arr[i];
+		newArr.push(arrOne);
+	}
+	return newArr;
+}
+
 module.exports = {
 	formatTime,
 	formatNumber,
-	parseQueryUrl
+	parseQueryUrl,
+	string2Array
 }
