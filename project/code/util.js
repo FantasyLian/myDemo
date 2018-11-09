@@ -58,9 +58,17 @@ const string2Array = str => {
 	return newArr;
 }
 
+/**
+ * 
+ */
+const array2String = arr => {
+	return arr.toString();
+}
+
 module.exports = {
 	formatTime,
 	formatNumber,
 	parseQueryUrl,
-	string2Array
+	string2Array,
+	array2String
 }
