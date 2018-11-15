@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import areaLinkage from './area-linkage';
+import areaLinkage from './AreaLlinkage';
 export default {
   name: 'HelloWorld',
   components: { areaLinkage },
