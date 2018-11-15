@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import Linkage from './Linkage';
+import areaLinkage from './area-linkage';
 export default {
   name: 'HelloWorld',
-  components: { 'area-linkage': Linkage },
+  components: { areaLinkage },
   data () {
     return {
       msg: '省、市、区县、街道四级联动'
