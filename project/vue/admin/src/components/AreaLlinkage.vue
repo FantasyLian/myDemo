@@ -16,7 +16,6 @@
 </template>
 <script>
     import axios from 'axios';
-    import { country as preinstall } from '../assets/data/from.preinstall';
     export default {
         name: 'area-linkage',
         // props: {
@@ -39,7 +38,7 @@
         // },
         data() {
             return {
-                preinstall,
+                mapJson: '/static/json/pcas.json',
                 province: [],
                 city: [],
                 district: [],
@@ -52,7 +51,7 @@
         },
         methods: {
             getData() {
-                axios.get(this.preinstall).then(res => {
+                axios.get(this.mapJson).then(res => {
                     if(res.status === 200) {
                         this.cuttingData(res.data);
                     }
@@ -60,17 +59,17 @@
             },
 
             cuttingData(data) {
-                this.province = [];
+                this.province = data;
                 this.city = [];
                 this.district = [];
                 this.street = [];
-                for(let item in data) {
-                    if(item.match(/0000$/)) { 
-                        this.province.push({id: item,value: data[item], children: []})
-                    } else if(item.match(/00$/)) {
-                        this.city.push({id: item, value: data[item], children: []})
-                    } else {
-                        this.district.push({id: item, value: data[item], children: []})
+                for (let idx_province in this.province) {
+                    for(let idx_city in this.city) {
+                        let provinceCode = this.province[idx_province].code.slice(0, 2);
+                        let cityCode = this.city[idx_city].code.slice(0, 2);
+                        if(provinceCode === cityCode) {
+                            this.city.push(this.province[idx_province].children)
+                        }
                     }
                 }
             },
@@ -81,7 +80,7 @@
             chooseStreet(val) { console.log(val) }
         },
         created() {
-            
+            this.getData();
         }
     }
 </script>
