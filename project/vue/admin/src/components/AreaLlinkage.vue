@@ -53,6 +53,7 @@
             getData() {
                 axios.get(this.mapJson).then(res => {
                     if(res.status === 200) {
+                        console.dir(res.data);
                         this.cuttingData(res.data);
                     }
                 })

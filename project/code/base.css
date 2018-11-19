@@ -8,3 +8,10 @@
 	height: 0;
 }
 .clearfix{ *zoom:1; }
+
+/* 垂直居中 */
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
