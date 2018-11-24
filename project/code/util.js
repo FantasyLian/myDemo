@@ -59,11 +59,19 @@ const string2Array = str => {
 }
 
 /**
- * 
+ * [description]
+ * @param  {[type]} to   [目标数组]
+ * @param  {[type]} from [转换数组]
+ * @return {[type]}      [description]
  */
-const array2String = arr => {
-	return arr.toString();
+const array2String = (to, from) => {
+	let tempObject = {};
+	to.map(item => {
+		tempObject[item.itemName] = from[item.itemName].join(',')
+	})
+	return Object.assign({}, from, tempObject);
 }
+
 
 module.exports = {
 	formatTime,
