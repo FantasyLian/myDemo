@@ -14,57 +14,40 @@
 </template>
 
 <script>
-    export default {
-        name: 'Login',
-        data() {
-            let checkAccount = (rule, value, callback) => {
-                if(!value) {
-                    return callback(new Error('请输入账号!'));
-                } else if(value.length < 4 || value.length > 12) {
-                    return callback(new Error('账号名必须在4·12位'));
-                } else {
-                    callback();
-                }
-            };
-            let checkPass = (rule, vlaue, callback) => {
-                debugger;
-                if(value === '') {
-                    return callback(new Error('请输入密码！'));
-                } else if(value.length < 4) {
-                    return callback(new Error('密码不能少于四位数'));
-                } else {
-                    callback();
-                }
-            };
-            return {
-                ruleForm2: {
-                    account: '',
-                    passwd: ''
-                },
-                rules2: {
-                    account: [
-                        {validator: checkAccount, trigger: 'blur'}
-                    ],
-                    passwd: [
-                        {validator: checkPass, trigger: 'blur'}
-                    ]
-                }
-            }
-        },
-        methods: {
-            handleSubmit2(ruleForm2) {
-                this.$refs.ruleForm2.validate(valid => {
-                    if(valid) {
-                        alert('提交！');
-                    } else {
-                        alert('登录失败！');
-                        console.log('error submit !!');
-                        return false;
-                    }
-                });
+import {} from '@/data/from.validate.rule'
+export default {
+    name: 'Login',
+    data() {
+        
+        return {
+            ruleForm2: {
+                account: '',
+                passwd: ''
+            },
+            rules2: {
+                account: [
+                    {validator: checkAccount, trigger: 'blur'}
+                ],
+                passwd: [
+                    {validator: checkPass, trigger: 'blur'}
+                ]
             }
         }
+    },
+    methods: {
+        handleSubmit2(ruleForm2) {
+            this.$refs.ruleForm2.validate(valid => {
+                if(valid) {
+                    alert('提交！');
+                } else {
+                    alert('登录失败！');
+                    console.log('error submit !!');
+                    return false;
+                }
+            });
+        }
     }
+}
 </script>
 
 <style lang="scss" scoped>
