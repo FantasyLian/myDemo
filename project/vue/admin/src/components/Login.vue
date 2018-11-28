@@ -14,24 +14,16 @@
 </template>
 
 <script>
-import {} from '@/data/from.validate.rule'
+import { checkForm as rules } from './data/from.validate.rule';
+import { loginPrei as alias } from './data/form.preinstall';
+import { loginForm as forms } from './data/form.data';
 export default {
     name: 'Login',
     data() {
-        
         return {
-            ruleForm2: {
-                account: '',
-                passwd: ''
-            },
-            rules2: {
-                account: [
-                    {validator: checkAccount, trigger: 'blur'}
-                ],
-                passwd: [
-                    {validator: checkPass, trigger: 'blur'}
-                ]
-            }
+            rules,
+            alias,
+            forms
         }
     },
     methods: {
