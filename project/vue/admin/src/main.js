@@ -5,12 +5,14 @@ import App from './App'
 import router from './router'
 
 import ElementUI from 'element-ui'
+import CKEditor from '@ckeditor/ckeditor5-vue'
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/base.css';
 
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+Vue.use(CKEditor)
 
 /* eslint-disable no-new */
 /*

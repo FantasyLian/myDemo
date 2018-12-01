@@ -5,6 +5,7 @@ import Router from 'vue-router'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
 import HelloWorld from '@/components/HelloWorld'
+import CKEditorExample from '@/components/CKEditorExample'
 
 Vue.use(Router)
 
@@ -21,6 +22,10 @@ let routes = [{
 	path: '/Login',
 	name: 'login',
 	component: Login
+}, {
+	path: '/CKEditorExample',
+	name: 'ckeditor-example',
+	component: CKEditorExample
 }]
 
 export default new Router({

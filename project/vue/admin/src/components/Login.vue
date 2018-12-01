@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { checkForm as rules } from './data/from.validate.rule';
+// import { checkForm as rules } from './data/from.validate.rule';
 import { loginPrei as alias } from './data/form.preinstall';
 import { loginForm as forms } from './data/form.data';
 export default {
