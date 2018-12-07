@@ -5,3 +5,7 @@ const loginForm = {
     userName: '',
     password: ''
 }
+
+export {
+    loginForm
+}

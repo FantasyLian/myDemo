@@ -1,4 +1,8 @@
 const loginPrei = {
-    name: '系统登录',
-    loginBtnTxt: '登录'
+    account: '用户名',
+    password: '密码'
+}
+
+export {
+    loginPrei
 }
