@@ -72,11 +72,23 @@ const array2String = (to, from) => {
 	return Object.assign({}, from, tempObject);
 }
 
+/**
+ * [对比两个数组，获取不同的元素]
+ * @param  {[type]} arg1 [第一个数组]
+ * @param  {[type]} arg2 [第二个数组]
+ * @return {[type]}      [description]
+ */
+const getArrayDifference = (arg1, arg2) => {
+	return arr1.concat(arr2).filter((v, i, arr) => {
+		return arr.indexOf(v) === arr.lastIndexOf(v)
+	});
+}
 
 module.exports = {
 	formatTime,
 	formatNumber,
 	parseQueryUrl,
 	string2Array,
-	array2String
+	array2String,
+	getArrayDifference
 }
