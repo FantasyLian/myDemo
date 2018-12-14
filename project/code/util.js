@@ -84,11 +84,39 @@ const getArrayDifference = (arg1, arg2) => {
 	});
 }
 
+/**
+ * [倒计时60秒发送验证码]
+ * @return {[type]} [description]
+ */
+const countDownTime = () => {
+	const s = 60;
+	let updateValidate;
+	time(o) => {
+		if('undefined' === typeof countDown) {
+			countDown = 1;
+		}	
+		if (s === 0) {
+			o.removeAttribute('disabled');
+			o.innerText = '获取验证码';
+			s = 60 * parseInt(countDown);
+		} else {
+			o.setAttribute('disabled', true);
+			o.innerText = s + '秒后重新发送';
+			s --;
+			updateValidate = setTimeout(function() {
+				time(o)
+			}, 1000);
+		}
+	};
+
+}
+
 module.exports = {
 	formatTime,
 	formatNumber,
 	parseQueryUrl,
 	string2Array,
 	array2String,
-	getArrayDifference
+	getArrayDifference,
+	countDownTime
 }
