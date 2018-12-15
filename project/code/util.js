@@ -103,7 +103,7 @@ const countDownTime = () => {
 			o.setAttribute('disabled', true);
 			o.innerText = s + '秒后重新发送';
 			s --;
-			updateValidate = setTimeout(function() {
+			updateValidate = setTimeout(() => {
 				time(o)
 			}, 1000);
 		}
