@@ -111,6 +111,19 @@ const countDownTime = () => {
 
 }
 
+/**
+ * [时间戳转换为标准时间]
+ * @param  {[type]} timestamp [description]
+ * @return {[type]}           [description]
+ */
+const timeTransfer = timestamp => {
+	let date = new Date(parseInt(timestamp));
+	let year = 1900 + date.getYear();
+	let month = '0' + (date.getMonth() + 1);
+	let day = '0' + date.getDate()
+	return year + '-' + month.substring(month.length - 2, month.length) + '-' + day.substring(day.length - 2, day.length)
+}
+
 module.exports = {
 	formatTime,
 	formatNumber,
@@ -118,5 +131,6 @@ module.exports = {
 	string2Array,
 	array2String,
 	getArrayDifference,
-	countDownTime
+	countDownTime,
+	timeTransfer
 }
