@@ -31,3 +31,10 @@ input[type="number"] {
 	display: flex;
 	justify-content: center;
 }
+
+/* 向左浮动 */
+.pull-left { float: left; }
+
+/* 向右浮动 */
+.pull-right { float: right; }
+
