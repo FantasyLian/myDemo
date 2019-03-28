@@ -1,13 +1,7 @@
-/* 清除浮動 */
-.clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-.clearfix{ *zoom:1; }
+/**
+ * fileName: base.css
+ * author: Mr.cat
+ */
 
 /* input[type="number"]去除右侧的上下箭头 */
 input::-webkit-outer-spin-button,
@@ -38,3 +32,13 @@ input[type="number"] {
 /* 向右浮动 */
 .pull-right { float: right; }
 
+/* 清除浮動 */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix{ *zoom:1; }
