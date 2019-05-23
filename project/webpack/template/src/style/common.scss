@@ -1,3 +1,20 @@
 body {
     background-color: #fed;
+    margin: 0;
+}
+#app {
+    h1 {
+        margin: 0;
+    }
+    img {
+        width: 100%;
+    }
+    input[type="text"] {
+        box-sizing: border-box;
+        width: 100%;
+        border: 0;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 10px;
+    }
 }
