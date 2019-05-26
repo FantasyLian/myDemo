@@ -18,6 +18,7 @@ export default {
     },
     created() {
         this.fetchData();
+        console.log('11111');
     },
     methods: {
         async fetchData() {
