@@ -3,20 +3,23 @@ const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-    entry: './src/main.js',
-    output: {
-        path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
-        filename: 'build.js'
-    },
-    devServer: {
-        historyApiFallback: true,
-        overlay: true
-    },
-    resolve: {
-        alias: {
-            'vue$': 'vue/dist/vue.esm.js'
-        }
+	entry: './src/main.js',
+	devtool: '#eval-source-map',
+	output: {
+		path: path.resolve(__dirname, './dist'),
+		publicPath: '/dist/',
+		filename: 'build.js'
+	},
+	devServer: {
+		host: '192.168.0.104',   	// 服务器的IP地址，可以使用IP也可以使用localhost
+		port: 8080,           		// 端口, 默认为8080
+		historyApiFallback: true,
+		overlay: true
+	},
+	resolve: {
+		alias: {
+			'vue$': 'vue/dist/vue.esm.js'
+		}
 	},
 	module: {
 		rules: [
@@ -79,3 +82,19 @@ module.exports = {
 		new VueLoaderPlugin()
 	]
 };
+
+if (process.env.NODE_ENV === 'production') {
+	module.exports.devtool = '#source-map';
+	module.exports.plugins = (module.exports.plugins || []).concat([
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: '"production"'
+			}
+		}),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false
+			}
+		}),
+	])
+}
