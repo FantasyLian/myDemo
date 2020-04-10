@@ -13,7 +13,7 @@ class Canvas2DUtil {
             let centerY: number = this.context.canvas.height * 0.5;
             this.context.fillStyle = 'red';
             this.context.fillText(text, centerX, centerY);
-            this.context.strokeStyle = 'green';
+            this.context.strokeStyle = 'black';
             this.context.strokeText(text, centerX, centerY);
             this.context.restore();
         }
