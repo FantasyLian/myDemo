@@ -18,4 +18,14 @@ Util.ajax.interceptors.response.use(res => {
     return res.data;
 });
 
+// 获取今天的时间戳
+Util.getTodayTime = () => {
+    const date = new Date();
+    date.setHours(0);
+    date.setMinutes(0);
+    date.setSeconds(0);
+    date.setMilliseconds(0);
+    return date.getTime();
+}
+
 export default Util;
