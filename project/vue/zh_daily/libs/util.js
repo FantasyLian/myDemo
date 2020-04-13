@@ -26,6 +26,15 @@ Util.getTodayTime = () => {
     date.setSeconds(0);
     date.setMilliseconds(0);
     return date.getTime();
-}
+};
+
+// 获取前一天的日期
+Util.prevDay = (timestamp = (new Date().getTime())) => {
+    const date = new Date(timestamp);
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1;
+    const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+    return year + month + day;
+};
 
 export default Util;
