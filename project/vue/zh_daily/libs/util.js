@@ -8,16 +8,6 @@ const Util = {
     apiPath: 'http://127.0.0.1:8010/'
 };
 
-// Ajax 通用配置
-Util.ajax = axios.create({
-    baseURL: Util.apiPath
-});
-
-//添加响应拦截器
-Util.ajax.interceptors.response.use(res => {
-    return res.data;
-});
-
 // 获取今天的时间戳
 Util.getTodayTime = () => {
     const date = new Date();
@@ -34,7 +24,17 @@ Util.prevDay = (timestamp = (new Date().getTime())) => {
     const year = date.getFullYear();
     const month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1;
     const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
-    return year + month + day;
+    return year + '' + month + '' + day;
 };
+
+// Ajax 通用配置
+Util.ajax = axios.create({
+    baseURL: Util.apiPath
+});
+
+//添加响应拦截器
+Util.ajax.interceptors.response.use(res => {
+    return res.data;
+});
 
 export default Util;
