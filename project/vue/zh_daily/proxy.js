@@ -22,7 +22,6 @@ const apiServer = http.createServer((req, res) => {
 			res.end(body);
 		}
 	}
-	
 	request.get(options, callback);
 });
 
@@ -47,7 +46,6 @@ const imgServer = http.createServer((req, res) => {
 			res.end(body);
 		}
 	}
-
 	request.get(options, callback);
 });
 
