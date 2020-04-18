@@ -14,10 +14,10 @@
 </template>
 <script>
 export default {
-   computed: {
-       cartList() {
-           return this.$store.state.cartList;
-       }
-   },
+    computed: {
+        cartList() {
+            return this.$store.state.cartList;
+        }
+    },
 }
 </script>
