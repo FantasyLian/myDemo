@@ -17,12 +17,23 @@ const config = {
                 loader: 'vue-loader',
                 options: {
                     loaders: {
+                        less: ExtractTextPlugin.extract ({
+                            use: ['css-loader', 'less-loader'],
+                            fallback: 'vue-style-loader'
+                        }),
                         css: ExtractTextPlugin.extract({
-                            use: 'css-loader',
+                            use: ['css-loader','less-loader'],
                             fallback: 'vue-style-loader'
                         })
                     }
                 }
+            },
+            {
+                test: /\.less/,
+                use: ExtractTextPlugin.extract({
+                    use: ['less-loader'],
+                    fallback: 'style-loader'
+                })
             },
             {
                 test: /\.js$/,
