@@ -117,31 +117,32 @@ export default {
     },
 }
 </script>
-<style lang="css" scope>
-    .list-control{
-        background: #fff;
+<style lang="less" scope>
+    @prefix-cls: list-control;
+    .@{prefix-cls} {
+         background: #fff;
         border-radius: 6px;
         margin: 16px;
         padding: 16px;
         box-shadow: 0 1px 1px rgba(0,0,0,.2);
-    }
-    .list-control-filter{
-        margin-bottom: 16px;
-    }
-    .list-control-filter-item,
-    .list-control-order-item {
-        cursor: pointer;
-        display: inline-block;
-        border: 1px solid #e9eaec;
-        border-radius: 4px;
-        margin-right: 6px;
-        padding: 2px 6px;
-    }
-    .list-control-filter-item.on,
-    .list-control-order-item.on{
-        background: #f2352e;
-        border: 1px solid #f2352e;
-        color: #fff;
+        &-filter {
+            margin-bottom: 16px;
+        }
+        &-filter-item,
+        &-order-item {
+             cursor: pointer;
+            display: inline-block;
+            border: 1px solid #e9eaec;
+            border-radius: 4px;
+            margin-right: 6px;
+            padding: 2px 6px;
+        }
+        &-filter-item.on,
+        &-order-item.on {
+            background: #f2352e;
+            border: 1px solid #f2352e;
+            color: #fff;
+        }
     }
     .product-not-found{
         text-align: center;
