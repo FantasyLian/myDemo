@@ -120,7 +120,7 @@ export default {
 <style lang="less" scope>
     @prefix-cls: list-control;
     .@{prefix-cls} {
-         background: #fff;
+        background: #fff;
         border-radius: 6px;
         margin: 16px;
         padding: 16px;
@@ -130,7 +130,7 @@ export default {
         }
         &-filter-item,
         &-order-item {
-             cursor: pointer;
+            cursor: pointer;
             display: inline-block;
             border: 1px solid #e9eaec;
             border-radius: 4px;
@@ -144,7 +144,7 @@ export default {
             color: #fff;
         }
     }
-    .product-not-found{
+    .product-not-found {
         text-align: center;
         padding: 32px;
     }

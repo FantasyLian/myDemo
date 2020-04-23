@@ -66,7 +66,7 @@ export default {
             width: 16px;
             height: 16px;
             border: 1px solid #dddee1;
-            border-radius: 6px auto;
+            border-radius: 6px;
             margin: 6px auto;
         }
         &-cost {

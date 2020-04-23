@@ -22,6 +22,7 @@ import product from '../product.js';
 export default {    
     data() {
         return {
+            imgs: 6,
             // 获取路由中的参数
             id: parseInt(this.$route.params.id),
             product: null
