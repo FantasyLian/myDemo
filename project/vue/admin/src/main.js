@@ -14,15 +14,6 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(CKEditor)
 
-/* eslint-disable no-new */
-/*
-new Vue({
-	el: '#app',
-	router,
-	components: {App},
-	template: '<App/>'
-});
-*/
 new Vue({
 	router,
 	render: h => h(App)
