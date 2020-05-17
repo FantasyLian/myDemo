@@ -14,7 +14,7 @@
 		computed: {
 			styles() {
 				return {
-					backgrund: this.color
+					background: this.color
 				}
 			}
 		},
