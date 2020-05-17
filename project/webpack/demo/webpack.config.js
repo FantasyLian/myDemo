@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = {
 	// 入口
 	entry: {
-		main: './index.js'
+		main: './main.js'
 	},
 	// 出口
 	output: {
@@ -40,6 +40,9 @@ const config = {
 					use: 'css-loader',
 					fallback: 'style-loader'
 				})
+			}, {
+				test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/,
+				loader: 'url-loader?limit=1024'
 			}
 		]
 	},
