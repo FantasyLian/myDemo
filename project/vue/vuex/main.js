@@ -4,7 +4,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import App from './app.vue';
-import Routers from './router.js'
+import Routers from './router.js';
+import './style.css';
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
