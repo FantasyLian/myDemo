@@ -11,6 +11,11 @@
 				type: Number
 			}
 		},
+		watch: {
+			number: (newVal, oldVal) => {
+				console.log(newVal, oldVal);
+			}
+		},
 		methods: {
 			handleAddRandom() {
 				const num = Math.floor(Math.random() * 100 + 1);
