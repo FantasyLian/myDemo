@@ -66,16 +66,16 @@ const nations = [
  * @type {Array}
  */
 const education = [
-	{ id: '1', name='研究生' },
-	{ id: '2', name='大学本科' },
-	{ id: '3', name='大学专科和专科学校' },
-	{ id: '4', name='中等专业学校' },
-	{ id: '5', name='技工学校' },
-	{ id: '6', name='高中' },
-	{ id: '7', name='初中' },
-	{ id: '8', name='小学' },
-	{ id: '9', name='文盲或半文盲' },
-	{ id: '10', name='不详' }
+	{ id: '1', name: '研究生' },
+	{ id: '2', name: '大学本科' },
+	{ id: '3', name: '大学专科和专科学校' },
+	{ id: '4', name: '中等专业学校' },
+	{ id: '5', name: '技工学校' },
+	{ id: '6', name: '高中' },
+	{ id: '7', name: '初中' },
+	{ id: '8', name: '小学' },
+	{ id: '9', name: '文盲或半文盲' },
+	{ id: '10', name: '不详' }
 ]
 
 /**
@@ -91,7 +91,7 @@ const occupation = [
 	{ id: '6', name: '生产、运输设备操作人员及有关人员' },
 	{ id: '7', name: '军人' },
 	{ id: '8', name: '学生' },
-	{ id: '9', name: '不便分类的其他从业人员' }
+	{ id: '9', name: '不便分类的其他从业人员' },
 	{ id: '10', name: '无职业' }
 ]
 
