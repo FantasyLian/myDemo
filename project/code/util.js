@@ -44,6 +44,18 @@ const parseQueryUrl = url => {
 }
 
 /**
+ * url参数序列化
+ * 将对象序列化成url参数传递
+ * console.log(stringifyUrl({ age: 27, name: "YZW" })); // "?age=27&name=YZW"
+ */
+const stringifyUrl (search = {}) => {
+  return Object.entries(search).reduce(
+    (t, v) => `${t}${v[0]}=${encodeURIComponent(v[1])}&`,
+    Object.keys(search).length ? "?" : ""
+  ).replace(/&$/, "");
+}
+
+/**
  * [description]
  * @param  {[type]} str [description]
  * @return {[type]}     [description]
@@ -128,6 +140,7 @@ module.exports = {
 	formatTime,
 	formatNumber,
 	parseQueryUrl,
+	stringifyUrl,
 	string2Array,
 	array2String,
 	getArrayDifference,
