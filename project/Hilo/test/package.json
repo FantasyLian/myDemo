@@ -1,0 +1,17 @@
+{
+  "name": "sheep",
+  "version": "0.0.0",
+  "description": "",
+  "author": {
+    "name": "Mr.cat",
+    "email": "fantasy.lian@163.com"
+  },
+  "main": "",
+  "keywords": [
+    "gene"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": "",
+  "private": true
+}
