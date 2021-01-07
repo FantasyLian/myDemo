@@ -2,6 +2,8 @@ import axios from 'axios'
 import { Toast, Indicator } from 'mint-ui'
 import { judgeAPP, getToken } from '@/utils/auth'
 
+const token = getToken()
+
 function startLoading () {
   Indicator.open({
     text: '加载中...',
@@ -26,8 +28,8 @@ const instance = axios.create({
 instance.interceptors.request.use(
   config => {
     startLoading()
-    const token = getToken()
-    config.headers.token = token
+    
+    token &&（config.headers.token = token）
 
     return config
   },
