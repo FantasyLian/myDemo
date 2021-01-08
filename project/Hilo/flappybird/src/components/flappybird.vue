@@ -1,5 +1,5 @@
 <template>
-  <section class="hilo" ref="hilo"></section>
+  <section ref="hilo"></section>
 </template>
 
 <script>
