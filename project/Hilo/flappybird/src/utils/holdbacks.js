@@ -1,10 +1,10 @@
 import Hilo from 'hilojs'
 
-let Holdback = Hilo.Class.create({
+const Holdbacks = Hilo.Class.create({
   Extends: Hilo.Container,
 
   constructor (properties) {
-    Holdback.superclass.constructor.call(this, properties)
+    Holdbacks.superclass.constructor.call(this, properties)
 
     this.hoseSpacingX = 300
     this.hoseSpacingY = 290
@@ -142,4 +142,4 @@ let Holdback = Hilo.Class.create({
 
 })
 
-export default Holdback
+export default Holdbacks

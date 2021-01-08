@@ -4,7 +4,6 @@ export default Hilo.Class.create({
   Mixes: Hilo.EventMixin,
 
   queue: null,
-
   bg: null,
   ground: null,
   ready: null,
@@ -14,7 +13,7 @@ export default Hilo.Class.create({
   holdback: null,
 
   load () {
-    const imgs = [
+    const resources = [
       { id: 'bg', src: require('@/assets/images/bg.png') },
       { id: 'ground', src: require('@/assets/images/ground.png') },
       { id: 'ready', src: require('@/assets/images/ready.png') },
@@ -25,11 +24,12 @@ export default Hilo.Class.create({
     ]
 
     this.queue = new Hilo.LoadQueue()
-    this.queue.add(imgs)
+    this.queue.add(resources)
     this.queue.on('complete', this.onComplete.bind(this))
     this.queue.start()
   },
 
+  // 加载完成
   onComplete () {
     this.bg = this.queue.get('bg').content
     this.ground = this.queue.get('ground').content
@@ -49,7 +49,7 @@ export default Hilo.Class.create({
       }
     })
 
-    const number = this.queue.get('number').content
+    var number = this.queue.get('number').content
     this.numberGlyphs = {
       0: { image: number, rect: [0, 0, 60, 91] },
       1: { image: number, rect: [61, 0, 60, 91] },
@@ -60,7 +60,7 @@ export default Hilo.Class.create({
       6: { image: number, rect: [401, 0, 60, 91] },
       7: { image: number, rect: [471, 0, 60, 91] },
       8: { image: number, rect: [541, 0, 60, 91] },
-      9: { image: number, rect: [611, 0, 60, 91] },
+      9: { image: number, rect: [611, 0, 60, 91] }
     }
 
     this.queue.off('complete')

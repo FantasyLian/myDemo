@@ -1,6 +1,6 @@
 import Hilo from 'hilojs'
 
-let OverScene = Hilo.Class.create({
+const OverScene = Hilo.Class.create({
   Extends: Hilo.Container,
 
   constructor (properties) {

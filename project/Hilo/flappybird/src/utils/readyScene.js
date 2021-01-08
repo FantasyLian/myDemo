@@ -1,6 +1,6 @@
 import Hilo from 'hilojs'
 
-let ReadyScene = Hilo.Class.create({
+const ReadyScene = Hilo.Class.create({
   Extends: Hilo.Container,
 
   constructor (properties) {

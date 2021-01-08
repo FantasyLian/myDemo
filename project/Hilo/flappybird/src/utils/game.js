@@ -1,7 +1,7 @@
 import Hilo from 'hilojs'
 import Asset from './asset'
 import Bird from './bird'
-import Holdback from './holdbacks'
+import Holdbacks from './holdbacks'
 import ReadyScene from './readyScene'
 import OverScene from './overScene'
 
@@ -10,6 +10,7 @@ export default class game {
     this.page = page
 
     this.asset = new Asset() // 下载队列
+    console.log(this.asset)
 
     this.stage = null // 舞台对象
     this.width = innerWidth * 2
@@ -20,14 +21,15 @@ export default class game {
     this.state = null
     this.score = null
 
-    this.bg = null
+    this.bg= null
     this.group = null
-    this.bird = null
-    this.holdback = null
+
+    this.holdbacks = null
     this.gameReadyScene = null
     this.gameOverScene = null
   }
 
+  // 初始化
   init () {
     this.asset.on('complete', function () {
       this.asset.off('complete')
@@ -40,7 +42,6 @@ export default class game {
     // this.width = Math.min(innerWidth, 450) * 2
     // this.height = Math.min(innerHeight, 750) * 2
     // this.scale = 0.5
-
     const renderType = location.search.indexOf('dom') !== -1 ? 'dom' : 'canvas'
     this.stage = new Hilo.Stage({
       renderType: renderType,
@@ -75,7 +76,7 @@ export default class game {
     // 初始化
     this.initBackground()
     this.initScenes()
-    this.initHoldback()
+    this.initHoldbacks()
     this.initBird()
     this.initCurrentScorer()
   }
@@ -131,9 +132,9 @@ export default class game {
     }).addTo(this.stage, this.ground.depth - 1)
   }
 
-  initHoldback () {
-    this.holdbacks = new Holdback({
-      id: 'holdback',
+  initHoldbacks () {
+    this.holdbacks = new Holdbacks({
+      id: 'holdbacks',
       image: this.asset.holdback,
       height: this.height,
       startX: this.width + 200,
