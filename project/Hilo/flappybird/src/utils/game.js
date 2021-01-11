@@ -9,24 +9,22 @@ export default class game {
   constructor(page) {
     this.page = page
 
-    this.asset = new Asset() // 下载队列
-    console.log(this.asset)
+    this.asset = new Asset()  // 下载队列
 
-    this.stage = null // 舞台对象
+    this.stage = null             // 舞台对象
     this.width = innerWidth * 2
     this.height = innerHeight * 2
     this.scale = 0.5
 
-    this.ticker = null // 定时器
-    this.state = null
-    this.score = null
+    this.ticker = null  // 定时器
 
-    this.bg= null
-    this.group = null
-
-    this.holdbacks = null
-    this.gameReadyScene = null
-    this.gameOverScene = null
+    // this.state = null
+    // this.score = null
+    // this.bg= null
+    // this.group = null
+    // this.holdbacks = null
+    // this.gameReadyScene = null
+    // this.gameOverScene = null
   }
 
   // 初始化

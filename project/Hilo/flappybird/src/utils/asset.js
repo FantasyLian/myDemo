@@ -24,6 +24,7 @@ export default Hilo.Class.create({
     ]
 
     this.queue = new Hilo.LoadQueue()
+    this.queue.maxConnections = 4;
     this.queue.add(resources)
     this.queue.on('complete', this.onComplete.bind(this))
     this.queue.start()
@@ -49,7 +50,7 @@ export default Hilo.Class.create({
       }
     })
 
-    var number = this.queue.get('number').content
+    let number = this.queue.get('number').content
     this.numberGlyphs = {
       0: { image: number, rect: [0, 0, 60, 91] },
       1: { image: number, rect: [61, 0, 60, 91] },
