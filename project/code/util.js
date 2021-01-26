@@ -48,7 +48,7 @@ const parseQueryUrl = url => {
  * 将对象序列化成url参数传递
  * console.log(stringifyUrl({ age: 27, name: "YZW" })); // "?age=27&name=YZW"
  */
-const stringifyUrl (search = {}) => {
+const stringifyUrl = (search = {}) => {
   return Object.entries(search).reduce(
     (t, v) => `${t}${v[0]}=${encodeURIComponent(v[1])}&`,
     Object.keys(search).length ? "?" : ""
@@ -103,10 +103,10 @@ const getArrayDifference = (arg1, arg2) => {
 const countDownTime = () => {
 	const s = 60;
 	let updateValidate;
-	time(o) => {
+	time = o => {
 		if('undefined' === typeof countDown) {
 			countDown = 1;
-		}	
+		}
 		if (s === 0) {
 			o.removeAttribute('disabled');
 			o.innerText = '获取验证码';
@@ -120,7 +120,6 @@ const countDownTime = () => {
 			}, 1000);
 		}
 	};
-
 }
 
 /**
@@ -134,6 +133,24 @@ const timeTransfer = timestamp => {
 	let month = '0' + (date.getMonth() + 1);
 	let day = '0' + date.getDate()
 	return year + '-' + month.substring(month.length - 2, month.length) + '-' + day.substring(day.length - 2, day.length)
+}
+
+/**
+ * [dataURL2File base64文件转位File对象]
+ * @param  {[type]} dataUrl [base64]
+ * @return {[type]}         [File]
+ */
+function dataURL2File (dataUrl) {
+  //TODO: 将base64转换为文件，dataUrl为base64字符串，filename为文件名（必须带后缀名，如.jpg,.png）
+  let arr = dataUrl.split(','),
+    mime = arr[0].match(/:(.*?);/)[1],
+    bstr = atob(arr[1]),
+    n = bstr.length,
+    u8arr = new Uint8Array(n)
+  while (n--) {
+    u8arr[n] = bstr.charCodeAt(n)
+  }
+  return new File([u8arr], { type: mime })
 }
 
 module.exports = {
