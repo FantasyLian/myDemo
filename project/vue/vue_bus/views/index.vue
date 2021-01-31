@@ -26,5 +26,5 @@
 		beforeDestory() {
 			this.$bus.off('add', this.handleAddRandom);
 		}
-	}
+	};
 </script>
